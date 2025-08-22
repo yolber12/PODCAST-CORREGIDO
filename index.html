@@ -204,6 +204,7 @@
                         <a href="#" class="nav-link text-white hover:text-yellow-500 font-bold px-3 py-2 rounded-md transition-colors duration-300" data-page="home" data-i18n="nav-inicio">Inicio</a>
                         <a href="#" class="nav-link text-white hover:text-yellow-500 font-bold px-3 py-2 rounded-md transition-colors duration-300" data-page="desarrollo" data-i18n="nav-desarrollo">Desarrollo</a>
                         <a href="#" class="nav-link text-white hover:text-yellow-500 font-bold px-3 py-2 rounded-md transition-colors duration-300" data-page="planes" data-i18n="nav-planes">Planes</a>
+                        <a href="#" class="nav-link text-white hover:text-yellow-500 font-bold px-3 py-2 rounded-md transition-colors duration-300" data-page="especial" data-i18n="nav-special">Especial</a>
                         <a href="#" class="nav-link text-white hover:text-yellow-500 font-bold px-3 py-2 rounded-md transition-colors duration-300" data-page="contacto" data-i18n="nav-contacto">Contacto</a>
                     </div>
                 </div>
@@ -230,7 +231,7 @@
         </nav>
 
         <!-- Contenedor principal de las páginas -->
-        <main class="w-full flex-grow flex flex-col items-center">
+        <main class="w-full flex-grow flex flex-col items-center pt-16">
 
             <!-- Sección de Inicio -->
             <section id="home" class="page-section active text-center max-w-4xl w-full mx-auto p-4 md:p-8">
@@ -239,7 +240,7 @@
                         Alas y Destinos
                     </h1>
                 </div>
-                <p class="mt-4 -mb-2 text-2xl sm:text-3xl font-semibold opacity-80" data-i18n="by-line">by Turpial Airlines</p>
+                <p class="mt-4 -mb-2 text-2xl sm:text-3xl font-semibold opacity-80" data-i18n="by-line">Turpial Airlines</p>
                 <p class="mt-8 text-sm sm:text-base md:text-lg mx-auto text-center max-w-4xl" data-i18n="home-intro">
                 </p>
                 <!-- Botones de navegación para la sección -->
@@ -252,7 +253,7 @@
             </section>
 
             <!-- Sección de Desarrollo -->
-            <section id="desarrollo" class="page-section text-center max-w-6xl w-full mx-auto p-4 md:p-8">
+            <section id="desarrollo" class="page-section text-center max-w-6xl w-full mx-auto p-4 md:p-8 pt-16">
                 <div class="title-box mb-8">
                     <h2 class="text-4xl sm:text-5xl font-bold" data-i18n="title-dev">
                         Desarrollo de la Primera Temporada
@@ -294,7 +295,7 @@
             </section>
             
             <!-- Sección de Planes (contenido existente, con botones de navegación) -->
-            <section id="planes" class="page-section text-center max-w-6xl w-full mx-auto p-4 md:p-8">
+            <section id="planes" class="page-section text-center max-w-6xl w-full mx-auto p-4 md:p-8 pt-16">
                 <div class="title-box mb-8">
                     <h2 class="text-4xl sm:text-5xl font-bold" data-i18n="title-plans">
                         Planes de Patrocinio
@@ -351,14 +352,47 @@
                     <button class="nav-button cta-button px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-opacity" onclick="showPage('desarrollo')">
                         <i class="fa-solid fa-arrow-left mr-2"></i> <span data-i18n="back-button">Retroceder</span>
                     </button>
+                    <button class="nav-button cta-button px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-opacity" onclick="showPage('especial')">
+                        <span data-i18n="next-button">Siguiente</span> <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </section>
+            
+            <!-- Sección de Planes Especiales -->
+            <section id="especial" class="page-section text-center max-w-2xl w-full mx-auto p-4 md:p-8 pt-16">
+                <div class="title-box mb-8">
+                    <h2 class="text-4xl sm:text-5xl font-bold" data-i18n="title-special">
+                        Plan de Patrocinio Especial
+                    </h2>
+                </div>
+                <p class="mb-8 mx-auto text-center max-w-2xl text-lg" data-i18n="special-intro"></p>
+                <!-- Tarjeta del Plan Especial -->
+                <div class="card card-animate p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full bg-yellow-500 py-2 text-center text-black font-bold text-sm sm:text-base" data-i18n="plan-special-highlight">
+                        LOCACIÓN ESPECIAL
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-3xl font-extrabold text-center highlight-gold" data-i18n="plan-special-title">PLAN LOCACIÓN</h3>
+                        <p class="text-center text-lg mt-4" data-i18n="plan-special-text"></p>
+                        <a href="#" class="cta-button block w-full mt-6 py-3 rounded-lg text-center font-bold text-lg hover:opacity-90 transition-opacity" onclick="showPage('contacto')" data-i18n="sponsor-button">
+                            Patrocinar
+                        </a>
+                    </div>
+                </div>
+                <!-- Botones de navegación para la sección -->
+                <div class="flex justify-between mt-8 w-full">
+                    <button class="nav-button cta-button px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-opacity" onclick="showPage('planes')">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> <span data-i18n="back-button">Retroceder</span>
+                    </button>
                     <button class="nav-button cta-button px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-opacity" onclick="showPage('contacto')">
                         <span data-i18n="next-button">Siguiente</span> <i class="fa-solid fa-arrow-right ml-2"></i>
                     </button>
                 </div>
             </section>
 
+
             <!-- Sección de Contacto -->
-            <section id="contacto" class="page-section text-center max-w-2xl w-full mx-auto p-4 md:p-8">
+            <section id="contacto" class="page-section text-center max-w-2xl w-full mx-auto p-4 md:p-8 pt-16">
                 <div class="title-box mb-8">
                     <h2 class="text-4xl sm:text-5xl font-bold" data-i18n="title-contact">
                         Contáctanos
@@ -382,7 +416,7 @@
                 </div>
                 <!-- Botones de navegación para la sección -->
                 <div class="flex justify-between mt-8 w-full">
-                    <button class="nav-button cta-button px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-opacity" onclick="showPage('planes')">
+                    <button class="nav-button cta-button px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-opacity" onclick="showPage('especial')">
                         <i class="fa-solid fa-arrow-left mr-2"></i> <span data-i18n="back-button">Retroceder</span>
                     </button>
                     <button class="nav-button opacity-0" disabled></button>
@@ -420,12 +454,13 @@
                 'nav-inicio': 'Inicio',
                 'nav-desarrollo': 'Desarrollo',
                 'nav-planes': 'Planes',
+                'nav-special': 'Especial',
                 'nav-contacto': 'Contacto',
                 'lang-label': 'Español',
                 'lang-es': 'Español',
                 'lang-en': 'Inglés',
                 'title-home': 'Alas y Destinos',
-                'by-line': 'by Turpial Airlines',
+                'by-line': 'Turpial Airlines',
                 'home-intro': 'Alas y Destinos es el puente audiovisual que conecta la magia de la aviación con el turismo y las historias de vida de sus protagonistas.<br><br>Con cada episodio, ofrecemos una plataforma única para que su marca vuele alto, alcanzando a una audiencia apasionada por los viajes, la aventura y la excelencia. Súmese a un viaje donde la pasión y el profesionalismo se encuentran.',
                 'next-button': 'Siguiente',
                 'back-button': 'Retroceder',
@@ -456,6 +491,11 @@
                 'bronce-1': 'Mención y colaboraciones en Instagram, TikTok y YouTube.',
                 'bronce-2': 'Acceso de publicidad en pantalla 10 segundos formato vertical 4K 55 pulgadas.',
                 'sponsor-button-bronce': 'Patrocinar',
+                'title-special': 'Plan de Patrocinio Especial',
+                'special-intro': 'Este plan está diseñado para locales, establecimientos, salones de eventos y más, que estén interesados en patrocinar el podcast "Alas y Destinos" cediendo sus instalaciones para ser el centro de atención de un episodio, permitiendo la visibilidad de su marca a un público amplio.',
+                'plan-special-highlight': 'LOCACIÓN ESPECIAL',
+                'plan-special-title': 'PLAN LOCACIÓN',
+                'plan-special-text': 'Las condiciones de este patrocinio serán acordadas mediante contacto directo, permitiendo una colaboración personalizada y beneficiosa para ambas partes.',
                 'title-contact': 'Contáctanos',
                 'contact-intro': 'Interesado en patrocinar el podcast Alas y Destinos? A continuación les presentamos los contactos:',
                 'contact-email-title': 'Correo Electrónico',
@@ -468,12 +508,13 @@
                 'nav-inicio': 'Home',
                 'nav-desarrollo': 'Development',
                 'nav-planes': 'Plans',
+                'nav-special': 'Special',
                 'nav-contacto': 'Contact',
                 'lang-label': 'English',
                 'lang-es': 'Spanish',
                 'lang-en': 'English',
                 'title-home': 'Wings and Destinations',
-                'by-line': 'by Turpial Airlines',
+                'by-line': 'Turpial Airlines',
                 'home-intro': 'Wings and Destinations is the audiovisual bridge connecting the magic of aviation with tourism and the life stories of its protagonists.<br><br>With each episode, we offer a unique platform for your brand to fly high, reaching an audience passionate about travel, adventure, and excellence. Join a journey where passion and professionalism meet.',
                 'next-button': 'Next',
                 'back-button': 'Back',
@@ -501,9 +542,14 @@
                 'sponsor-button-plata': 'Sponsor',
                 'plan-bronze': 'BRONZE PLAN',
                 'price-bronze': '$150',
-                'bronce-1': 'Mentions and collaborations on Instagram, TikTok, and YouTube.',
+                'bronce-1': 'Mentions and collaborations on Instagram, TikTok and YouTube.',
                 'bronce-2': 'Access to screen advertising (10 seconds, 4K 55-inch vertical format).',
                 'sponsor-button-bronce': 'Sponsor',
+                'title-special': 'Special Sponsorship Plan',
+                'special-intro': 'This plan is designed for venues, establishments, event halls, and more, interested in sponsoring the "Wings and Destinations" podcast by providing their facilities to be the focus of an episode, allowing their brand to gain visibility with a broad audience.',
+                'plan-special-highlight': 'SPECIAL LOCATION',
+                'plan-special-title': 'LOCATION PLAN',
+                'plan-special-text': 'The terms of this sponsorship will be agreed upon through direct contact, allowing for a personalized and mutually beneficial collaboration.',
                 'title-contact': 'Contact Us',
                 'contact-intro': 'Interested in sponsoring the Wings and Destinations podcast? Here are the contacts:',
                 'contact-email-title': 'Email Address',
@@ -519,7 +565,7 @@
             const themeIcon = document.getElementById('theme-icon');
             const navLinks = document.querySelectorAll('.nav-link');
             const pages = document.querySelectorAll('.page-section');
-            const pageOrder = ['home', 'desarrollo', 'planes', 'contacto'];
+            const pageOrder = ['home', 'desarrollo', 'planes', 'especial', 'contacto'];
             let currentPageIndex = 0;
             let currentLang = 'es';
 
